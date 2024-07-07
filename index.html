@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.CSS">
+    <script defer src="helper.js"></script>
+    <script src="https://kit.fontawesome.com/08840a3df3.js" crossorigin="anonymous"></script>
+    <title>Budgeting App</title>
+</head>
+<body>
+    <div id="header">
+        <div class="topbar">
+            <nav>
+                <ul id="sidemenu">
+                    <li> <a href="#header"> Home </a></li>
+                    <li> <a href="#about"> About </a></li>
+                    <li> <a href="#total-section"> Start </a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="images/mesh-964.png" class="logo">
+        <div class="header-text">
+            <p> Track your expenses</p>
+            <h2> Financial Budget Assistant</h2>
+            <ul id="start">
+                <li> <a href="#total-section"> Get Started  <i class="fa-solid fa-arrow-right-long"></i> </a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <h2> About </h2>
+            <p> This is a budgeting assistant project using HTML, CSS, and JavaScipt. <br> Its goal is to assist users in calculating their expenses and remaining funds. </p>
+        </div>
+    </div>
+    <div class="separator">
+        <p> Expense Tracker </p>
+    </div>
+    <div class="input-total" id="total-section">
+        <h2> Total </h2>
+        <p> Input your total budget </p>
+        <input type="number" id="total" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+        <div class="input-group ">
+            <label>Remaining: $</label>
+            <span id="remaining">0</span>
+        </div>
+    </div>
+    <div class="budget">
+        <div class="grid-container">
+            <div class="sub-container">
+                <h2> Rent </h2>
+                <p> Input the expenses for rent </p>
+                <input type="number" id="rent" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+            </div>
+            <div class="sub-container">
+                <h2> Insurance </h2>
+                <p> Input the expenses for insurance bills </p>
+                <input type="number" id="insurance" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+            </div>
+            <div class="sub-container">
+                <h2> Food </h2>
+                <p> Input the total grocery and food expenses </p>
+                <input type="number" id="food" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+            </div>
+            <div class="sub-container">
+                <h2> Transportation </h2>
+                <p> Input the gasoline expenses </p>
+                <input type="number" id="gas" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+            </div>
+            <div class="sub-container">
+                <h2> Entertainment </h2>
+                <p> Input the entertainment subscriptions, purchases, etc. </p>
+                <input type="number" id="subs" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+            </div>
+            <div class="sub-container"> 
+                <h2> Extra </h2>
+                <p> Input extra expenses (going out, vacation, gifts, etc.)</p>
+                <input type="number" id="extra" oninput="updateRemaining()" placeholder="Enter amount" style="text-align: center;"></input>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright Yevgenia Minchuk </p>
+    </div>
+</body>
+</html>
