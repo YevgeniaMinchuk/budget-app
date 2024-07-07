@@ -28,6 +28,12 @@ nav{
     z-index: 100;
     border-bottom: 1px solid grey;
 }
+.topbar h3 {
+    flex: 1;
+    padding: 1em 2em;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+}
 nav ul li {
     display: inline-block;
     list-style: none;
